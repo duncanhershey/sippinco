@@ -6,7 +6,7 @@
 
 body {
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Domine', serif;
 }
 
 .text-muted {
@@ -171,11 +171,11 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #222;
+    background-color: #002147;
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,cursive;
     color: #fed136;
 }
 
@@ -235,7 +235,7 @@ fieldset[disabled] .btn-xl.active {
         /*padding: 25px 0;*/
         padding: 10px 0; /* Change for Project 3 Video 8 */
         border: 0;
-        background-color: #222;
+        background-color: #002147;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -254,7 +254,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-color: #002147;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -282,7 +282,7 @@ header .intro-text {
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Domine', serif;
     font-size: 22px;
     font-style: italic;
     line-height: 22px;
@@ -291,7 +291,7 @@ header .intro-text .intro-lead-in {
 header .intro-text .intro-heading {
     margin-bottom: 25px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Domine', serif;
     font-size: 50px;
     font-weight: 700;
     line-height: 50px;
@@ -305,7 +305,7 @@ header .intro-text .intro-heading {
 
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
-        font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: 'Domine', serif;
         font-size: 40px;
         font-style: italic;
         line-height: 40px;
@@ -314,7 +314,7 @@ header .intro-text .intro-heading {
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
-        font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-family: 'Domine', serif;
         font-size: 75px;
         font-weight: 700;
         line-height: 75px;
@@ -335,7 +335,7 @@ section h2.section-heading {
 section h3.section-subheading {
     margin-bottom: 75px;
     text-transform: none;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Domine', serif;
     font-size: 16px;
     font-style: italic;
     font-weight: 400;
@@ -414,7 +414,7 @@ section h3.section-subheading {
 
 #portfolio .portfolio-item .portfolio-caption p {
     margin: 0;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Domine', serif;
     font-size: 16px;
     font-style: italic;
 }
@@ -792,7 +792,7 @@ ul.social-buttons li a:active {
 
 .portfolio-modal .modal-content p.item-intro {
     margin: 20px 0 30px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Domine', serif;
     font-size: 16px;
     font-style: italic;
 }
@@ -917,7 +917,7 @@ box-shadow: 0 1px 1px rgba(0,0,0,.05);
 .inspiration h1{
     color:#d4a432;
     font-style:italic;
-font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-family: 'Domine', serif;
 text-transform: none;
 }
 
@@ -973,7 +973,7 @@ border-color: #ddd;
 
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
-    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Domine', serif;
     font-size: 40px;
     font-style: italic;
     line-height: 40px;
@@ -1021,6 +1021,10 @@ section#contact {
 
 .data-layer{
     display: none;
+}
+
+.wide-map { 
+    height:400px;
 }
 
 h3 a {

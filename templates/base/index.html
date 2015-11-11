@@ -24,9 +24,9 @@
     <!-- Custom Fonts -->
     <link href="{% static "font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Domine:400,700' rel='stylesheet' type='text/css'>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,7 +34,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body id="page-top" class="index">
@@ -50,7 +49,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="/">Coffeed</a>
+                <a class="navbar-brand page-scroll" href="/">logo-here</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,6 +71,8 @@
                     </li>
                     {% endblock %}
                 </ul>
+                {% block search %}
+                {% endblock %}
             </div>
             <!-- /.navbar-collapse -->
         </div>
@@ -205,6 +206,8 @@
 {% endblock %}
     <footer>
         <div class="container">
+         {% block pagination %}
+        {% endblock %}
             <div class="row">
                 <div class="col-md-4">
                     <span class="copyright">Copyright &copy; Your Website 2014</span>
@@ -402,22 +405,15 @@
     </div>
 
     <!-- jQuery -->
-    <script src="{% static "js/jquery.js" %}"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="{% static "js/gmaps.js" %}"></script>
+    <script src="{% static "js/maps.js" %}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js"%}"></script>
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="{% static "js/classie.js" %}"></script>
-    <script src="{% static "js/cbpAnimatedHeader.js" %}"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="{% static "js/jqBootstrapValidation.js" %}"></script>
-    
-
-    <!-- Custom Theme JavaScript -->
-    <script src="{% static "js/agency.js" %}"></script>
 
 </body>
 

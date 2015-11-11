@@ -1,0 +1,11 @@
+<div class="row">
+<div class="col-md-4">
+ 
+<p><b>Area: </b>{% if location.area %}{{ location.get_area_display }}{% else %}----{% endif %}</p>
+<p><b>WiFi: </b>{% if location.wifi %}{{ location.get_wifi_display }}{% else %}----{% endif %}</p>
+</div>
+<div class="col-md-4">
+<p><b>Seating: </b>{% if location.seating %}{{ location.get_seating_display }}{% else %}----{% endif %}</p>
+<p><b>Outdoor Seating: </b>{% if location.outdoor %}{{ location.get_outdoor_display }}{% else %}----{% endif %}</p>
+</div>
+</div>

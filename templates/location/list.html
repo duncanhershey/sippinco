@@ -1,21 +1,56 @@
 {% extends "base/theme.html" %}
+{% load bootstrap_pagination %}
 {% block main_content %}
-
+<div class="data-layer">
+	<ul>
+	{% for location in object_list %}
+		<li class="location-data" data-latitude="{{ location.position.latitude }}" data-longitude="{{ location.position.longitude }}" data-id="{{ location.id }}">{{ location.title }}</li>
+	{% endfor %}
+	</ul>
+</div>
+<div id="map" class="wide-map"></div>
 <div class="row main-content">
 	<div class="col-md-2"></div>
 	<div class="col-md-8">
 	{% for location in object_list %}
-		<div class=''>
-	<h3><a href="{{ location.get_absolute_url }}">{{ location.title }}</a></h3>
-	{% if location.address %}<p><b>Location: </b>{{ location.address }}</p>{% endif %}
- {% if location.hours %}<p>{{ location.hours }}</p>{% endif %}
- <p>{{ location.description }}</p>
- {% if location.image_file %}
- <img class="img-responsive" src="{{ location.image_file.url }}"></img>
+	<div class='row'>
+		<div class="col-md-8">
+			<h3><a href=" {{ location.get_absolute_url }}">{{ location.title }}</a></h3>
+	    	{% if location.address %}<p><b>Location: </b>{{ location.address }}</b></p>{% endif %}
+	    	{% if location.hours %}<p><b>Opening Hours: </b>{{ location.hours }}</b></p>{% endif %}
+  			<p><b>{{ location.description }}</b></p>
+		
+	 {% if location.image_file %}
+ 		<img class="img-responsive" src="{{ location.image_file.url }}"></img><br><br><br>
  {% endif %}
+
 	</div>
-{% endfor %}
 </div>
-<div class="col-md-2"></div>
+	{% endfor %}
+	</div>
+	<div class="col-md-2"></div>
 </div>
+<div class="row">
+<div class="col-md-4 panel">
+<div class="form-group">
+<form action="POST">
+      <fieldset>
+          <select name="category">
+          <option value="">By area..</option>
+                <option value="0">Botley</option>
+                <option value="1">Cowley</option>
+                <option value="2">Central</option>
+                <option value="3">Headington</option>
+                <option value="4">Jericho</option>
+                <option value="5">Summertown</option>
+           </select>
+      </fieldset>
+      <button name="area-filter">Filter results</button>
+    </form>
+</div>
+</div>
+</div>
+{% endblock %}
+{% block pagination %}
+{% bootstrap_paginate page_obj range=10 show_prev_next="false" show_first_last="true" %}
 {% endblock %}
