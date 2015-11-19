@@ -1,56 +1,126 @@
 {% extends "base/theme.html" %}
 {% load bootstrap_pagination %}
 {% block main_content %}
-<div class="data-layer">
-	<ul>
-	{% for location in object_list %}
-		<li class="location-data" data-latitude="{{ location.position.latitude }}" data-longitude="{{ location.position.longitude }}" data-id="{{ location.id }}">{{ location.title }}</li>
-	{% endfor %}
-	</ul>
-</div>
-<div id="map" class="wide-map"></div>
-<div class="row main-content">
-	<div class="col-md-2"></div>
-	<div class="col-md-8">
-	{% for location in object_list %}
-	<div class='row'>
-		<div class="col-md-8">
-			<h3><a href=" {{ location.get_absolute_url }}">{{ location.title }}</a></h3>
-	    	{% if location.address %}<p><b>Location: </b>{{ location.address }}</b></p>{% endif %}
-	    	{% if location.hours %}<p><b>Opening Hours: </b>{{ location.hours }}</b></p>{% endif %}
-  			<p><b>{{ location.description }}</b></p>
-		
-	 {% if location.image_file %}
- 		<img class="img-responsive" src="{{ location.image_file.url }}"></img><br><br><br>
- {% endif %}
+    <div class="data-layer">
+        <ul>
+            {% for location in object_list %}
+                <li class="location-data" data-latitude="{{ location.position.latitude }}" data-longitude="{{ location.position.longitude }}" data-id="{{ location.id }}">{{ location.title }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="map" class="wide-map"></div>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-4">
+            {% if query or category >= 0 %}
+                <div style="margin-top: 37px;">
+                    <div class="form-group">
+                        <h3>You Searched For:</h3>
+                    </div>
+                    <div class="form-group">
+                        {% if query and category >= 0 %}
+                            <span>"{{ query }}"</span>
+                            <span> located in <strong>{{ category }}</strong></span>
+                        {% elif query %}
+                            <span>"{{ query }}"</span>
+                        {% elif category >= 0 %}
+                            <span> Shops in <strong>{{ category }}</strong></span>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        <div class="col-md-4">
+            <div class="">
+                <div class="form-group">
+                    <form id="search_form" method="GET" action="/search">
+                        <div class="col-md-12">
+                            <h3>Filter Results</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search" class="form-control" name="query" value="{{ request.GET.query|default:"" }}"/>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <fieldset>
+                                <div class="form-group">
+                                    <select id="id_category" name="category" class="form-control">
+                                        <option value="" {% if request.GET.category == "" %}selected{% endif %}>By area..</option>
+                                        <option value="0" {% if request.GET.category == "0" %}selected{% endif %}>Botley</option>
+                                        <option value="1" {% if request.GET.category == "1" %}selected{% endif %}>Cowley</option>
+                                        <option value="2" {% if request.GET.category == "2" %}selected{% endif %}>Central</option>
+                                        <option value="3" {% if request.GET.category == "3" %}selected{% endif %}>Headington</option>
+                                        <option value="4" {% if request.GET.category == "4" %}selected{% endif %}>Jericho</option>
+                                        <option value="5" {% if request.GET.category == "5" %}selected{% endif %}>Summertown</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <!--<button name="area-filter">Filter results</button>-->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row main-content">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="location-grid">
+                {% for location in object_list %}
+                    <div class="grid-item">
+                        <div class='row'>
+                            <div class="col-md-12">
+                                <h3><a href=" {{ location.get_absolute_url }}">{{ location.title }}</a></h3>
+                                {% if location.area >= 0 %}<p><b>Location: </b>{{ location.get_area_display }}</p>{% endif %}
+                                {% if location.hours %}<p><b>Opening Hours: </b>{{ location.hours }}</p>{% endif %}
+                                <p><b>{{ location.description }}</b></p>
+                                {% if location.image_file %}
+                                    <img class="img-responsive" src="{{ location.image_file.url }}"></img><br><br><br>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            {% comment %}
+            {% for location in object_list %}
+                <div class='row'>
+                    <div class="col-md-8">
+                        <h3><a href=" {{ location.get_absolute_url }}">{{ location.title }}</a></h3>
+                        {% if location.area >= 0 %}<p><b>Location: </b>{{ location.get_area_display }}</p>{% endif %}
+                        {% if location.hours %}<p><b>Opening Hours: </b>{{ location.hours }}</p>{% endif %}
+                        <p><b>{{ location.description }}</b></p>
 
-	</div>
-</div>
-	{% endfor %}
-	</div>
-	<div class="col-md-2"></div>
-</div>
-<div class="row">
-<div class="col-md-4 panel">
-<div class="form-group">
-<form action="POST">
-      <fieldset>
-          <select name="category">
-          <option value="">By area..</option>
-                <option value="0">Botley</option>
-                <option value="1">Cowley</option>
-                <option value="2">Central</option>
-                <option value="3">Headington</option>
-                <option value="4">Jericho</option>
-                <option value="5">Summertown</option>
-           </select>
-      </fieldset>
-      <button name="area-filter">Filter results</button>
-    </form>
-</div>
-</div>
-</div>
+                        {% if location.image_file %}
+                            <img class="img-responsive" src="{{ location.image_file.url }}"></img><br><br><br>
+                        {% endif %}
+
+                    </div>
+                </div>
+            {% endfor %}
+            {% endcomment %}
+        </div>
+        <div class="col-md-2"></div>
+    </div>
 {% endblock %}
 {% block pagination %}
-{% bootstrap_paginate page_obj range=10 show_prev_next="false" show_first_last="true" %}
+    {% bootstrap_paginate page_obj range=10 show_prev_next="false" show_first_last="true" %}
+{% endblock %}
+{% block bottom_js %}
+    <script type="application/javascript">
+        $(document).ready(function(){
+            $('#id_category').change(function(){
+                $('#search_form').submit();
+            });
+
+            $('.location-grid').isotope({
+                // options
+                itemSelector: '.grid-item',
+                layoutMode: 'fitRows',
+                fitRows: {
+                    gutter: 10
+                }
+            });
+        });
+    </script>
 {% endblock %}

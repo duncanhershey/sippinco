@@ -30,60 +30,60 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
-"django.core.context_processors.debug",
-"django.core.context_processors.i18n",
-"django.core.context_processors.media",
-"django.core.context_processors.static",
-"django.core.context_processors.tz",
-"django.contrib.messages.context_processors.messages",
-"django.core.context_processors.request"
-)
+                               "django.core.context_processors.debug",
+                               "django.core.context_processors.i18n",
+                               "django.core.context_processors.media",
+                               "django.core.context_processors.static",
+                               "django.core.context_processors.tz",
+                               "django.contrib.messages.context_processors.messages",
+                               "django.core.context_processors.request"
+                               )
 
 
 # Application definition
 
 INSTALLED_APPS = (
-	'django.contrib.admin',
-	'django.contrib.auth',
-	'django.contrib.contenttypes',
-	'django.contrib.sessions',
-	'django.contrib.messages',
-	'django.contrib.staticfiles',
-	'core',
-	'widget_tweaks',
-	'sitegate',
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'core',
+    'widget_tweaks',
+    'sitegate',
     'bootstrap3',
     'geoposition',
     'bootstrap_pagination',
 )
 
 MIDDLEWARE_CLASSES = (
-	'django.contrib.sessions.middleware.SessionMiddleware',
-	'django.middleware.common.CommonMiddleware',
-	'django.middleware.csrf.CsrfViewMiddleware',
-	'django.contrib.auth.middleware.AuthenticationMiddleware',
-	'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-	'django.contrib.messages.middleware.MessageMiddleware',
-	'django.middleware.clickjacking.XFrameOptionsMiddleware',
-	'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'coffeedapp.urls'
 
 TEMPLATES = [
-{
-	'BACKEND': 'django.template.backends.django.DjangoTemplates',
-	'DIRS': [os.path.join(MAIN_DIR, 'templates')],
-	'APP_DIRS': True,
-	'OPTIONS': {
-		'context_processors': [
-			'django.template.context_processors.debug',
-			'django.template.context_processors.request',
-			'django.contrib.auth.context_processors.auth',
-			'django.contrib.messages.context_processors.messages',
-		],
-	},
-},
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(MAIN_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
 ]
 
 
@@ -102,15 +102,15 @@ DATABASES = {
 }
 
 if ON_HEROKU == '1':
-	import dj_database_url
-	DATABASES = {'default': dj_database_url.config()}
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config()}
 else:
-	DATABASES = {
-		'default': {
-			'ENGINE': 'django.db.backends.sqlite3',
-			'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-		}
-	}
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
@@ -139,13 +139,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 TEMPLATE_DIRS = (
-os.path.join(MAIN_DIR, 'templates'),
+    os.path.join(MAIN_DIR, 'templates'),
 )
 
 STATICFILES_DIRS = (
-
-os.path.join(MAIN_DIR, 'static'),
-
+    os.path.join(MAIN_DIR, 'static'),
 )
 
 STATIC_ROOT ='staticfiles'
@@ -158,3 +156,8 @@ AWS_SECRET_ACCESS_KEY = os.environ.get('AWSSecretKey')
 AWS_ACCESS_KEY_ID = os.environ.get('AWSAccessKeyId')
 
 AWS_STORAGE_BUCKET_NAME = 'om-swig'
+
+
+LOGIN_URL = "/entrance"
+LOGIN_REDIRECT_URL = "/location"
+LOGOUT_URL = "/logout"

@@ -7,15 +7,24 @@
   <li>
  	<a class="page-scroll" href="/location">Find Cocktails</a>
  </li>
-
+ {% if request.user.is_authenticated %}
+     <li>
+        <a class="" href="#">({{ request.user.username }})</a>
+     </li>
+     <li>
+         <a class="" href="/logout">Logout</a>
+     </li>
+ {% endif %}
 {% endblock %}
 
 {% block search %}
+    {% comment %}
 <form action="/search/" class="navbar-form navbar-right" method="get">
  <div class="form-group">
  <input type="text" placeholder="Search" class="form-control" name="query"></input>
  </div>
 </form>
+    {% endcomment %}
 {% endblock %}
 {% block main_content %}
 {% endblock %}
