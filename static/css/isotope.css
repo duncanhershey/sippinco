@@ -3,9 +3,9 @@
     padding: 10px;
     float: left;
     width: 300px;
-    height: 400px;
+    height: 550px;
     background: #FFF;
-    border: 2px solid #002147;
+    border: 3px solid #002147;
 }
 
 .grid-item--width2 { width: 50%; }
@@ -15,4 +15,26 @@
     content: '';
     display: block;
     clear: both;
+}
+
+.grid-item-content {
+    height: 530px;
+}
+
+.grid-item-content .location-details-container {
+    height: 50%;
+}
+
+.grid-item-content .location-details-spacer {
+    height: 5%;
+}
+
+.grid-item-content .location-img-container {
+    height: 40%;
+    width: 275px;
+    overflow: hidden;
+}
+
+.grid-item-content .location-img-container img {
+    width: 275px;
 }
