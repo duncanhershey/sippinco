@@ -19,8 +19,26 @@
                 <div id="details">
                     <div class="col-md-12">
                         <div class="row">
-                            <div class="fb-like" data-href="{{ fb_like_url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-                            <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
+                            {% if location.fb_page %}
+                                <div id="fb-page-like-container" class="pull-left" style="width: 300px; margin-right: 20px;">
+                                    <div class="fb-page" data-href="{{ location.fb_page }}" data-width="300"
+                                         data-height="120" data-small-header="false" data-adapt-container-width="true"
+                                         data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
+                                        <div class="fb-xfbml-parse-ignore">
+                                            <blockquote cite="{{ location.fb_page }}"><a
+                                                    href="{{ location.fb_page }}">{{ location.fb_page_label }}</a>
+                                            </blockquote>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            {% comment %}
+                                <div class="fb-like" data-href="{{ fb_like_url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                            {% endcomment %}
+                            <div id="twitter-tweet-container" class="pull-left">
+                                <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ location.title|urlize }}" data-size="large">Tweet</a>
+                            </div>
+                            <div class="clearfix"></div>
                         </div>
                         <div class="row">
                             <div class="col-md-8">
