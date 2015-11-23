@@ -35,17 +35,46 @@ a.active {
 }
 
 a {
-    color: #fed136;
+    color: #002147;
 }
 
 a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #fec503;
+    color: #002147;
+    text-decoration: underline;
 }
 
-h1,
+/* Text ------- */
+h1, p {
+  
+  text-overflow: ellipsis; }
+
+h1 {
+  float: left;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  /*20px*/ }
+  
+
+
+
+p {
+  font-size: 1rem; }
+ 
+
+h1, p {
+  overflow: hidden;
+  text-overflow: ellipsis; }
+
+p {
+  font-size: 1.25rem; }
+
+}
+strong {
+  font-weight: bold; }
+
 h2,
 h3,
 h4,
@@ -171,19 +200,20 @@ fieldset[disabled] .btn-xl.active {
 
 .navbar-default {
     border-color: transparent;
-    background-color: #002147;
+    background-color: white;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-default .navbar-brand {
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,cursive;
-    color: #fed136;
+    color: white;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
 .navbar-default .navbar-brand.active {
-    color: #fec503;
+    color:  #002147;
 }
 
 .navbar-default .navbar-collapse {
@@ -191,17 +221,18 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .navbar-toggle {
-    border-color: #fed136;
-    background-color: #fed136;
+    border-color: white;
+    background-color: white;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
+    background-color:  #002147;
 }
 
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #fed136;
+    background-color:  white;
+
 }
 
 .navbar-default .nav li a {
@@ -209,13 +240,15 @@ fieldset[disabled] .btn-xl.active {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color: #fff;
+    color:  #002147;
+
 }
 
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color: #fed136;
+    color:  #002147;
+    text-decoration: underline;
 }
 
 .navbar-default .navbar-nav>.active>a {
@@ -227,7 +260,7 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: #fff;
-    background-color: #fec503;
+    background-color: # #002147;
 }
 
 @media(min-width:768px) {
@@ -235,7 +268,7 @@ fieldset[disabled] .btn-xl.active {
         /*padding: 25px 0;*/
         padding: 10px 0; /* Change for Project 3 Video 8 */
         border: 0;
-        background-color: #002147;
+        background-color: white;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
@@ -254,7 +287,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #002147;
+        background-color: white;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -337,8 +370,8 @@ section h3.section-subheading {
     text-transform: none;
     font-family: 'Domine', serif;
     font-size: 16px;
-    font-style: italic;
     font-weight: 400;
+    line-height: 1.5;
 }
 
 @media(min-width:768px) {
@@ -684,6 +717,7 @@ section#contact .form-group textarea.form-control {
 section#contact .form-control:focus {
     border-color: #fed136;
     box-shadow: none;
+
 }
 
 section#contact::-webkit-input-placeholder {
@@ -770,6 +804,25 @@ ul.social-buttons li a:active {
     outline: 0;
 }
 
+.btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus,
+.btn-success:hover, .open > .dropdown-toggle.btn-success {
+    color: #fff;
+    background-color: #2980b9;
+    border-color: black;
+}
+
+.btn-success {
+    color: #fff;
+    background-color:  #002147;
+    border-color: black;
+}
+
+.btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus,
+.btn-success:hover, .open > .dropdown-toggle.btn-success {
+    color: #fff;
+    background-color: #34495E;
+    border-color: black;
+}
 .portfolio-modal .modal-content {
     padding: 100px 0;
     min-height: 100%;
@@ -784,6 +837,7 @@ ul.social-buttons li a:active {
 .portfolio-modal .modal-content h2 {
     margin-bottom: 15px;
     font-size: 3em;
+    color: #002147;
 }
 
 .portfolio-modal .modal-content p {
@@ -800,6 +854,7 @@ ul.social-buttons li a:active {
 .portfolio-modal .modal-content ul.list-inline {
     margin-top: 0;
     margin-bottom: 30px;
+     color:#002147;
 }
 
 .portfolio-modal .modal-content img {
@@ -922,8 +977,9 @@ text-transform: none;
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Lucida Console", Monaco, monospace;
-    color: #d4a432;
+   font-family: 'Quicksand', sans-serif;
+    color: #002147;
+    text-transform: uppercase; 
 }
 
 .pagination>li:first-child>a, .pagination>li:first-child>span {
@@ -1034,4 +1090,63 @@ h3 a {
 
 .btn{
     border-radius: 0px;
+}
+
+.grid-item{
+    margin-left:1%;
+    margin-right: 1%;
+    border:0 !important;
+    -webkit-box-shadow: 5px 5px 22px -6px black;
+    -moz-box-shadow: 5px 5px 22px -6px black;
+    box-shadow:5px 5px 22px -6px black;
+
+
+}
+
+.grid-item .item{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.grid-item h3,.grid-item p,.grid-item .rating{
+    padding-left:15px;
+}
+
+.grid-item p{
+    margin-top:3%;
+}
+
+select{
+ 
+  background-color: #f2f2f2 !important;
+  background-repeat: no-repeat;
+
+  background-size: 16px 16px;
+    border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -webkit-appearance: none !important;
+  outline:0;
+  box-shadow: none  !important;
+}
+
+select:focus{
+    box-shadow: none  !important;
+     outline:0;
+     border:0;
+}
+
+select + i.fa {
+  float: right;
+  margin-top: -25px;
+  margin-right: 4%;
+  /* this is so when you click on the chevron, your click actually goes on the dropdown menu */
+  pointer-events: none;
+  /* everything after this is just to cover up the original arrow */
+  /* (for browsers that don't support the syntax used above) */
+
+  padding-right: 5px;
+}
+
+#search_form input{
+    border-radius: 0!important;
 }

@@ -1,16 +1,13 @@
 {% extends "base/index.html" %}
-
 {% block navigation %}
- <li>
- 	<a class="page-scroll" href="/location">Find Coffee</a>
- </li>
-  <li>
- 	<a class="page-scroll" href="/location">Find Cocktails</a>
- </li>
  {% if request.user.is_authenticated %}
+
      <li>
-        <a class="" href="#">({{ request.user.username }})</a>
+        <a class="" href="#">Hello {{ request.user.username }}</a>
      </li>
+     <li>
+        <a class="page-scroll" href="/location/create/">Add a Location</a>
+     </li> 
      <li>
          <a class="" href="/logout">Logout</a>
      </li>

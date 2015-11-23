@@ -24,7 +24,8 @@
     <link href="{% static "font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Domine:400,700' rel='stylesheet' type='text/css'>
-
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel='stylesheet' type='text/css'>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -38,7 +39,8 @@
 <body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+   <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -48,24 +50,27 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="/">logo-here</a>
+                <a class="navbar-brand page-scroll" href="/"><strong>Sippin'</strong>|Oxford</a><strong>(Beta)</strong>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                {% block navigation %}
+                    {% block navigation %}
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">How it works</a>
+                        <a class="page-scroll" href="#services">How It Works</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#team">Our Team</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Get invited</a>
+                        <a class="page-scroll" href="#contact">Join The Email List</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="/location">Find a Coffee Shop</a>
                     </li>
                     {% endblock %}
                 </ul>
@@ -82,7 +87,7 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-heading">Hi, we're coffeed.</div>
-                <div class="intro-lead-in">Find your favorite office away from home. We're curating some of the best coffee shops to successfully work, meet & thrive at.</div>
+                <div class="intro-lead-in">Discover, review and add new coffee shops here in Oxford.</div>
                 
                 <a href="{% static "#services" class="page-scroll btn btn-xl" %}">How it works</a>
             </div>
@@ -100,19 +105,19 @@
  </div>
     <div class="row text-center">
         <div class="col-md-4">
-            <img class="coffeed-svg-icon" src="{% static "img/svg/python_flag.svg" %}"></>
+            <img class="coffeed-svg-icon" src="{% static "img/svg/map.svg" %}"></>
             <h4 class="service-heading">Discover Amazing Spots</h4>
-            <p class="text-muted">Coffeed works hard to curate the best coffee places for independent working- so that you can hit those deadlines.</p>
+            <p class="text-muted">Discover a new coffee shop here in Oxford with our web app!</p>
         </div>
     <div class="col-md-4">
-            <img class="coffeed-svg-icon" src="{% static "img/svg/python_badge.svg" %}"></>
+            <img class="coffeed-svg-icon" src="{% static "img/svg/star.svg" %}"></>
             <h4 class="service-heading">Review Your Favorites</h4>
-            <p class="text-muted">Find out what other people are saying and chime in with your opinion. Help each other find the best work locale.</p>
+            <p class="text-muted">Find out what other users are saying, and chime in with your opinion.</p>
     </div>
  <div class="col-md-4">
-            <img class="coffeed-svg-icon" src="{% static "img/svg/python_rocket.svg" %}"></>
-            <h4 class="service-heading">Promote Your Business</h4>
-            <p class="text-muted">Anyone can add their coffee shop location to Coffeed for free. Sit back, relax & watch the reviews pour in.</p>
+            <img class="coffeed-svg-icon" src="{% static "img/svg/checklist.svg" %}"></>
+            <h4 class="service-heading">Promote Your Business?</h4>
+            <p class="text-muted">Registered users can add their coffee shop location to Sippin' for free. Sit back, relax &amp; watch the reviews pour in.</p>
     </div>
  </div>
  </div>
@@ -125,82 +130,7 @@
 
     <!-- Team Section -->
     <!-- Team Section -->
- <section id="team" class="bg-light-gray">
- <div class="container">
- <div class="row">
- <div class="col-lg-12 text-center">
- <h2 class="section-heading">Our Caffeinated Team</h2>
- <h3 class="section-subheading text-muted">Working hard to find you the best of the best.</h3>
- </div>
- </div>
- <div class="row">
- <div class="col-sm-4">
- <div class="team-member">
- <img src="{% static "img/team/1.jpg" %}" class="img-responsive img-circle" alt="">
- <h4>Kristina Zmaic</h4>
- <p class="text-muted">Founder & Designer</p>
- <ul class="list-inline social-buttons">
- <li><a href="https://twitter.com/kzmaic"><i class="fa fa-twitter"></i></a>
- </li>
- <li><a href="https://instagram.com/kzmaic/"><i class="fa fa-instagram"></i></a>
- </li>
- </ul>
- </div>
- </div>
- <div class="col-sm-4">
- <div class="team-member">
- <img src="{% static "img/team/2.jpg" %}" class="img-responsive img-circle" alt="">
- <h4>Eric Neuman</h4>
- <p class="text-muted">Web & Business Development</p>
- <ul class="list-inline social-buttons">
- <li><a href="https://twitter.com/eric_neuman"><i class="fa fa-twitter"></i></a>
- </li>
- <li><a href="https://instagram.com/eric_neuman"><i class="fa fa-instagram"></i></a>
- </li>
- <li><a href="https://www.linkedin.com/in/ericneuman"><i class="fa fa-linkedin"></i></a>
- </li>
- </ul>
- </div>
- </div>
- <div class="col-sm-4">
- <div class="team-member">
- <img src="{% static "img/team/3.jpg" %}" class="img-responsive img-circle" alt="">
- <h4>Chris Castiglione</h4>
- <p class="text-muted">Project Management</p>
- <ul class="list-inline social-buttons">
- <li><a href="https://twitter.com/castig"><i class="fa fa-twitter"></i></a>
- </li>
- <li><a href="https://instagram.com/castig"><i class="fa fa-instagram"></i></a>
- </li>
- <li><a href="http://www.linkedin.com/in/castig"><i class="fa fa-linkedin"></i></a>
- </li>
- </ul>
- </div>
- </div>
- </div>
- <div class="row">
- <div class="col-lg-8 col-lg-offset-2 text-center">
- <p class="large text-muted">We're three geeks who love coffee, working, and building things — and wanted to map out all the best coffee locations where we would work with ease in our neighborhood.</p>
- </div>
- </div>
- </div>
- </section>
-
-    <!--<section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                </div>
-            </div>
-        </div>
-    </section>-->
+ 
 {% endblock %}
     <footer>
         <div class="container">
@@ -208,15 +138,10 @@
         {% endblock %}
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2014</span>
-                </div>
-                <div class="col-md-4">
                     <ul class="list-inline social-buttons">
                         <li><a href="#"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>

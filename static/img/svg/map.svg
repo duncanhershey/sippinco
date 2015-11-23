@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="72.938" height="94.469" viewBox="0 0 72.938 94.469">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffc272;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #000;
+      }
+
+      .cls-3 {
+        fill-opacity: 0.15;
+      }
+
+      .cls-4 {
+        filter: url(#gradient-overlay-1);
+      }
+    </style>
+
+    <filter id="gradient-overlay-1" filterUnits="userSpaceOnUse">
+      <feImage x="20.937999999999988" y="0" width="32.5" height="50" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzIuNSIgaGVpZ2h0PSI1MCI+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjE2LjI1IiB5MT0iNTAiIHgyPSIxNi4yNSI+CiAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMTNhYTA4Ii8+CiAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNWNkNjRjIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiLz48L3N2Zz4="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+  </defs>
+  <g>
+    <path d="M19.688,65.631 L2.001,71.995 L11.352,38.964 L23.081,34.321 C23.081,34.321 33.807,36.798 36.007,36.798 C39.295,36.798 49.333,34.500 49.333,34.500 L62.304,38.845 L70.938,71.932 L53.438,65.755 L36.628,72.062 L19.688,65.631 Z" class="cls-1"/>
+    <path d="M57.779,37.746 L61.052,38.436 L38.620,94.467 L35.449,92.783 L48.875,58.439 L39.521,52.963 L30.248,77.253 L26.661,73.979 L34.177,56.187 L9.929,39.091 L10.405,33.784 L35.970,51.555 L38.657,43.585 L4.238,22.174 L5.466,20.534 L40.198,39.460 L40.221,39.622 L47.274,21.753 L51.106,22.435 L40.981,49.122 L50.520,54.428 L57.779,37.746 Z" class="cls-2"/>
+    <path d="M50.188,63.750 L46.680,31.308 L60.188,36.250 L68.938,69.883 L50.188,63.750 ZM17.642,63.647 L21.438,32.500 L32.688,34.407 L34.437,69.990 L17.688,63.631 L17.642,63.647 Z" class="cls-3"/>
+    <path d="M45.188,33.750 C40.804,41.809 35.324,50.020 35.188,50.000 C35.081,49.984 30.689,42.752 25.188,33.750 C22.085,28.673 18.948,24.515 18.938,17.500 C18.925,8.180 25.243,0.000 34.563,0.000 C43.883,0.000 51.438,7.555 51.438,16.875 C51.438,23.591 48.112,28.376 45.188,33.750 ZM35.188,8.750 C31.046,8.750 27.688,12.108 27.688,16.250 C27.688,20.392 31.046,23.750 35.188,23.750 C39.330,23.750 42.688,20.392 42.688,16.250 C42.688,12.108 39.330,8.750 35.188,8.750 Z" class="cls-4"/>
+  </g>
+</svg>

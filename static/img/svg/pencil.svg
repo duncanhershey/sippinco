@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="79.782" height="74.938" viewBox="0 0 79.782 74.938">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ffc208;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #ffdd61;
+      }
+
+      .cls-3 {
+        fill: #eaa100;
+      }
+
+      .cls-4 {
+        fill: #ff4452;
+        filter: url(#gradient-overlay-1);
+      }
+
+      .cls-5 {
+        fill: #b6b7b9;
+        filter: url(#gradient-overlay-2);
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+    </style>
+
+    <filter id="gradient-overlay-1" filterUnits="userSpaceOnUse">
+      <feImage x="0" y="0" width="25.875999999999976" height="25.6563" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjUuODc1OTk5OTk5OTk5OTc2IiBoZWlnaHQ9IjI1LjY1NjMiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIxMi45MzgiIHkxPSIyNS42NTYiIHgyPSIxMi45MzgiPgogIDxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmMjk2OSIvPgogIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmNzQ1NSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIi8+PC9zdmc+"/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+    <filter id="gradient-overlay-2" filterUnits="userSpaceOnUse">
+      <feImage x="7.687999999999988" y="7.4375" width="20" height="20" preserveAspectRatio="none" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiPjxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHkxPSIyMCIgeDI9IjIwIj4KICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiM2ZTcwNzUiLz4KICA8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNlN2U3ZTciLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIvPjwvc3ZnPg=="/>
+      <feComposite operator="in" in2="SourceGraphic"/>
+      <feBlend in2="SourceGraphic" result="gradientFill"/>
+    </filter>
+  </defs>
+  <g>
+    <path d="M52.469,65.969 C52.102,65.752 50.623,66.255 50.308,65.940 L2.427,18.842 C-1.116,15.299 -0.267,12.437 1.746,10.424 L9.922,2.489 C12.983,-0.571 16.040,-1.132 19.664,2.492 L67.307,49.491 C66.978,49.565 67.252,51.852 67.469,52.219 L52.469,65.969 Z" class="cls-1"/>
+    <path d="M15.035,-1.438 L77.063,58.646 L71.430,64.461 L10.476,4.279 L15.035,-1.438 Z" class="cls-2"/>
+    <path d="M7.469,12.883 L61.219,65.969 L56.219,72.219 L2.469,18.469 L7.469,12.883 Z" class="cls-3"/>
+    <path d="M14.546,-2.709 L23.170,5.841 L5.921,22.942 L-2.703,14.391 L14.546,-2.709 Z" class="cls-4"/>
+    <path d="M22.469,4.719 L24.969,7.219 L7.469,24.719 L4.969,22.219 L22.469,4.719 Z" class="cls-5"/>
+    <path d="M49.006,65.694 L49.121,65.587 C50.547,65.856 51.997,65.616 52.914,64.698 C53.780,63.832 53.984,62.552 53.726,61.264 L55.408,59.686 C56.727,59.860 58.031,59.582 58.878,58.734 C59.674,57.938 59.913,56.792 59.747,55.612 L61.572,53.899 C62.854,54.105 64.106,53.886 64.919,53.073 C65.681,52.311 65.907,51.161 65.765,49.964 L67.138,48.674 L69.896,69.688 L49.006,65.694 Z" class="cls-6"/>
+    <path d="M71.453,61.531 L70.890,69.102 L69.198,70.713 L61.224,71.438 L71.453,61.531 Z" class="cls-1"/>
+  </g>
+</svg>
