@@ -295,17 +295,68 @@ fieldset[disabled] .btn-xl.active {
     }
 }
 
-header {
-    text-align: center;
-    color: #fff;
-    background-attachment: scroll;
-    background-image: url(../img/header-bg.jpg);
-    background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+.css-carousel {
+    width: 100%;
+    height: 350px; /* Height of images */
+    position: relative;
+    overflow: hidden;
+}
+.css-carousel .css-img {
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-animation: css-carousel-fade 30s linear infinite;
+    -moz-animation: css-carousel-fade 30s linear infinite;
+    -ms-animation: css-carousel-fade 30s linear infinite;
+    animation: css-carousel-fade 30s linear infinite;
+}
+.css-carousel .css-img:nth-child(2) {
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    -ms-animation-delay: 5s;
+    animation-delay: 5s;
+}
+.css-carousel .css-img:nth-child(3) {
+    -webkit-animation-delay: 10s;
+    -moz-animation-delay: 10s;
+    -ms-animation-delay: 10s;
+    animation-delay: 10s;
+}
+.css-carousel .css-img:nth-child(4) {
+    -webkit-animation-delay: 15s;
+    -moz-animation-delay: 15s;
+    -ms-animation-delay: 15s;
+    animation-delay: 15s;
+}
+.css-carousel .css-img:nth-child(5) {
+    -webkit-animation-delay: 20s;
+    -moz-animation-delay: 20s;
+    -ms-animation-delay: 20s;
+    animation-delay: 20s;
+}
+.css-carousel .css-img:nth-child(6) {
+    -webkit-animation-delay: 25s;
+    -moz-animation-delay: 25s;
+    -ms-animation-delay: 25s;
+    animation-delay: 25s;
+}
+@-webkit-keyframes css-carousel-fade {
+    0%, 20%, 100% { opacity: 0; }
+    5%, 15% { opacity: 1;}
+}
+@-moz-keyframes css-carousel-fade {
+    0%, 20%, 100% { opacity: 0; }
+    5%, 15% { opacity: 1;}
+}
+@-ms-keyframes css-carousel-fade {
+    0%, 20%, 100% { opacity: 0; }
+    5%, 15% { opacity: 1;}
+}
+@keyframes css-carousel-fade {
+    0%, 20%, 100% { opacity: 0; }
+    5%, 15% { opacity: 1;}
 }
 
 header .intro-text {
@@ -316,19 +367,11 @@ header .intro-text {
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: 'Domine', serif;
-    font-size: 22px;
-    font-style: italic;
-    line-height: 22px;
+    font-size: 15px;
+    line-height: 5px;
+    color: white;
 }
 
-header .intro-text .intro-heading {
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    font-family: 'Domine', serif;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 50px;
-}
 
 @media(min-width:768px) {
     header .intro-text {
@@ -339,21 +382,42 @@ header .intro-text .intro-heading {
     header .intro-text .intro-lead-in {
         margin-bottom: 25px;
         font-family: 'Domine', serif;
-        font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
+        font-size: 14px;
+        line-height: 15px;
     }
 
     header .intro-text .intro-heading {
         margin-bottom: 50px;
         text-transform: uppercase;
         font-family: 'Domine', serif;
-        font-size: 75px;
+        font-size: 14px;
         font-weight: 700;
-        line-height: 75px;
+        line-height: 15px;
     }
 }
 
+
+.carousel .item {
+    left: 0 !important;
+      -webkit-transition: opacity .8s; /*adjust timing here */
+         -moz-transition: opacity .8s;
+           -o-transition: opacity .8s;
+              transition: opacity .8s;
+}
+.carousel-control {
+    background-image: none !important; /* remove background gradients on controls */
+}
+/* Fade controls with items */
+.next.left,
+.prev.right {
+    opacity: 1;
+    z-index: 1;
+}
+.active.left,
+.active.right {
+    opacity: 0;
+    z-index: 2;
+}
 section {
     padding: 100px 0; 
 }
@@ -1030,17 +1094,18 @@ border-color: #ddd;
 header .intro-text .intro-lead-in {
     margin-bottom: 25px;
     font-family: 'Domine', serif;
-    font-size: 40px;
-    font-style: italic;
-    line-height: 40px;
-    color: #d4a432;
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
 header {
     text-align: left;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(../img/Python_Header_Image.jpg);
+    background-image: url(../img/think-coffee-header.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -1050,7 +1115,7 @@ header {
 }
 section#contact {
     background-color: #222;
-    background-image: url(../img/Python_Subscribe_Image.jpg);
+    background-image: url(../img/subscribe.jpg);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -1096,9 +1161,9 @@ h3 a {
     margin-left:1%;
     margin-right: 1%;
     border:0 !important;
-    -webkit-box-shadow: 5px 5px 22px -6px black;
-    -moz-box-shadow: 5px 5px 22px -6px black;
-    box-shadow:5px 5px 22px -6px black;
+    -webkit-box-shadow: 3px 3px 17px -6px black;
+    -moz-box-shadow: 3px 3px 17px -6px black;
+    box-shadow:3px 3px 17px -6px black;
 
 
 }

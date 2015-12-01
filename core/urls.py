@@ -7,8 +7,8 @@ from django.contrib.auth.decorators import login_required
 urlpatterns = patterns('',
 
     url(r'^$', coreviews.LandingView.as_view()),
-    url(r'location/$', coreviews.LocationListView.as_view()),
-   	url(r'search/$', coreviews.SearchListView.as_view()),
+    url(r'location/$', login_required(coreviews.LocationListView.as_view())),
+   	url(r'search/$', login_required(coreviews.SearchListView.as_view())),
     url(r'location/(?P<pk>\d+)/detail/$', login_required(coreviews.LocationDetailView.as_view()), name='location_list'),
     url(r'location/create/$', login_required(coreviews.LocationCreateView.as_view())),
     url(r'location/(?P<pk>\d+)/update/$', login_required(coreviews.LocationUpdateView.as_view()), name='location_update'),

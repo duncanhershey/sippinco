@@ -80,7 +80,7 @@
                                 <img class="img-responsive" src="{{ location.image_file.url }}"></img><br>
                             {% endif %}
                             <!--{% if location.hours %}<p><b>Opening Hours: </b>{{ location.hours }}</p>{% endif %}-->
-                            {% if location.area >= 0 %}<p><b>Location: </b>{{ location.get_area_display }}</p>{% endif %}
+                            {% if location.area >= 0 %}<p><b>Area: </b>{{ location.get_area_display }}</p>{% endif %}
                             <div class="coffeed-rating rating">
                           
                            {% include 'base/rating.html' with rating=location.get_average_rating %}

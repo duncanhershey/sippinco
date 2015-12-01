@@ -40,9 +40,8 @@ SUBURB_CHOICES = (
 
 WIFI_CHOICES = (
     (0, 'None Available'),
-
-    (1, 'Sometimes Ok'),
-    (3, 'Strong')
+    (1, 'Patchy'),
+    (2, 'Strong')
 )
 
 PLURAL_CHOICES = (
