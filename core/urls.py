@@ -1,11 +1,11 @@
 from django.conf.urls import patterns, include, url
+from django.views.generic import TemplateView
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
 import core.views as coreviews
 from django.contrib.auth.decorators import login_required
 
 urlpatterns = patterns('',
-
     url(r'^$', coreviews.LandingView.as_view()),
     url(r'location/$', login_required(coreviews.LocationListView.as_view())),
    	url(r'search/$', login_required(coreviews.SearchListView.as_view())),
@@ -17,4 +17,4 @@ urlpatterns = patterns('',
     url(r'entrance/$', coreviews.entrance),
     url(r'login/$', auth_views.login, {'template_name': 'base/entrance.html'}),
     url('^logout/', auth_views.logout, {'next_page': '/'})
-)
+) 
