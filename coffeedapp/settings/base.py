@@ -12,9 +12,18 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.core.exceptions import ImproperlyConfigured
+
+
+def get_env_variable(var_name):
+    try:
+        return os.environ[var_name]
+    except KeyError:
+        error_message = 'Set the %s enviroment variable' % var_name
+        raise ImproperlyConfigured(error_message)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MAIN_DIR = os.path.dirname(os.path.dirname(__file__))
+MAIN_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 ON_HEROKU = os.environ.get('ON_HEROKU')
 
@@ -27,17 +36,9 @@ SECRET_KEY = 'e#mhnnk47*i4*=ytdm)kud2v-y#wy9r=t$y&^j-%pcqqc2e4dn'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
-TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
-                               "django.core.context_processors.debug",
-                               "django.core.context_processors.i18n",
-                               "django.core.context_processors.media",
-                               "django.core.context_processors.static",
-                               "django.core.context_processors.tz",
-                               "django.contrib.messages.context_processors.messages",
-                               "django.core.context_processors.request"
-                               )
+
 
 
 # Application definition
@@ -138,15 +139,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-TEMPLATE_DIRS = (
-    os.path.join(MAIN_DIR, 'templates'),
-)
-
 STATICFILES_DIRS = (
     os.path.join(MAIN_DIR, 'static'),
 )
 
-STATIC_ROOT ='staticfiles'
+STATIC_ROOT = 'staticfiles'
 
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
