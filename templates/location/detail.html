@@ -13,13 +13,12 @@
     </div>
     <div class="header-buffer">
     </div>
-    <!-- Services Section -->
+     <!-- Services Section -->
     <section id="services">
         <div class="container">
             <div class="" >
                 <div id="details">
                     <div class="col-md-12">
-           
                         <div class="row">
                             <div class="col-md-8">
                                 <h2>{{ location.title }}</h2>
@@ -28,7 +27,7 @@
                             </div>
             <div class="row">
                         <div class="col-md-4 text-right">
-                            <h3>Average user rating{% include 'base/rating.html' with rating=location.get_average_rating %}</h3>
+                            <h4>Average user rating{% include 'base/rating.html' with rating=location.get_average_rating %}</h4>
                             </div
                             <div class="col-md-4">
                             </div>
@@ -60,9 +59,10 @@
                                     {% if location.website %}<p><a href="{{ location.website }}">{{ location.website }}</a></p>{% endif %}
                                 </div>
                                 <div class="col-md-3"></div>
-
                             </div>
-                            
+                            <div>
+                            <a type="button" href="{% url 'location_update' pk=location.id %}" class="btn btn-default pull-right">Edit / Update Page Specifics</a><br><br>
+                            </div>
                             <div class="col-md-12">
                                 {% if location.fb_page %}
                                     <div id="fb-page-like-container" class="pull-left" style="width: 300px; margin-right: 20px;">
@@ -79,17 +79,12 @@
                                 {% comment %}
                                     <div class="fb-like" data-href="{{ fb_like_url }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                                 {% endcomment %}
-                                <div id="twitter-tweet-container" class="pull-left">
-                                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text={{ location.title|urlize }}" data-size="large">Tweet</a>
-                                </div>
-                                
                             </div>
                         </div>
-                        <div class = "row">
-                            <div class="col-md-12 edit-update-create">
-                                <a type="button" href="{% url 'location_update' pk=location.id %}" class="btn btn-default pull-right">Edit</a>
+                        <div class="row">
+                            <div class="col-md-12 edit-update-create">                              
                                 {% if user_review %}
-                                    <a type="button" href="{% url 'review_update' pk=location.id %}" class="btn btn-default pull-right">Update Review</a>
+                                    <a type="button" href="{% url 'review_update' pk=location.id %}" class="btn btn-default pull-right">Edit Review</a>
                                 {% else %}
                                     <a type="button" href="{% url 'review_create' pk=location.id %}" class="btn btn-default pull-right">Create Review</a>
                                 {% endif %}
@@ -98,11 +93,13 @@
                         <div class ="clearfix"></div>
                         <div class = "row reviews">
                             <div class="col-md-12">
+                            <h3>Reviews</h3>
                                 {% for review in location.get_reviews %}
                                 {% include 'base/review.html' with location=location %}
                                 {% endfor %}
                             </div>
                         </div>
+                        <a type="button" href="/location" class="btn btn-default pull-right">Go back to results page</a>
                         </div>
                     </div>
                 </div>

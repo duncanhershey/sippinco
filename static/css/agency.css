@@ -36,14 +36,14 @@ a.active {
 }
 
 a {
-    color: #002147;
+    color: black;
 }
 
 a:hover,
 a:focus,
 a:active,
 a.active {
-    color: #002147;
+    color: black;
     text-decoration: underline;
 }
 
@@ -241,14 +241,14 @@ fieldset[disabled] .btn-xl.active {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    color:  #002147;
+    color:  #333;
 
 }
 
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
-    color:  #002147;
+    color:  #333;
     text-decoration: underline;
 }
 
@@ -667,7 +667,7 @@ aside.clients img {
 
 section#contact {
     background-color: #222;
-    background-image: url(../img/map-image.png);
+    background-image: url(../img/subscribe.jpg);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -732,8 +732,10 @@ section#contact .text-danger {
 }
 
 footer {
-    padding: 25px 0;
-    text-align: center;
+    padding: 35px 0 0 0;
+    text-align: left;
+    background-color: #222222;
+    color:#bdc3c7;
 }
 
 footer span.copyright {
@@ -749,6 +751,18 @@ footer ul.quicklinks {
     text-transform: none;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     line-height: 40px;
+    font-size: 9px;
+    margin-top: 3%;
+    border-top: 1px solid #595959;
+}
+
+footer ul.quicklinks li a{
+    color:#bdc3c7;
+}
+
+
+footer p{
+    font-size:14px;
 }
 
 ul.social-buttons {
@@ -757,14 +771,14 @@ ul.social-buttons {
 
 ul.social-buttons li a {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 33px;
+    height: 33px;
     border-radius: 100%;
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 15px;
+    line-height: 37px;
     outline: 0;
-    color: #fff;
-    background-color: #002147;
+    color: #333;
+    background-color: #F5F5F5;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
@@ -887,7 +901,7 @@ ul.social-buttons li a:active {
 
 ::selection {
     text-shadow: none;
-    background: #fed136;
+    background: #808080;
 }
 
 img::selection {
@@ -976,8 +990,8 @@ border-bottom-right-radius: 0px;
 z-index: 2;
 color: #fff;
 cursor: default;
-background-color: #d4a432;
-border-color: #d4a432;
+background-color: #333;
+border-color: #333;
 }
 .pagination>li>a, .pagination>li>span {
 position: relative;
@@ -985,7 +999,7 @@ float: left;
 padding: 6px 12px;
 margin-left: -1px;
 line-height: 1.42857143;
-color: #d4a432;
+color: #333;
 text-decoration: none;
 background-color: #fff;
 border: 1px solid #ddd;
@@ -1000,7 +1014,7 @@ border-color: #d4a432;
 element.style {
 }
 .pagination>.disabled>a, .pagination>.disabled>a:focus, .pagination>.disabled>a:hover, .pagination>.disabled>span, .pagination>.disabled>span:focus, .pagination>.disabled>span:hover {
-color: #d4a432;
+color: #333;
 cursor: not-allowed;
 background-color: #fff;
 border-color: #ddd;
@@ -1028,6 +1042,8 @@ header {
     background-size: cover;
     -o-background-size: cover;
 }
+
+
 section#contact {
     background-color: #002147;
     background-position: center;
@@ -1069,6 +1085,7 @@ h3 a {
 
 .btn{
     border-radius: 0px;
+    margin-bottom: 10px;
 }
 
 .grid-item{
@@ -1193,4 +1210,57 @@ select + i.fa {
 .reviews p{
     overflow: visible;
 }
+
+header{
+  height: 100%;
+  padding: 70px 90px 120px 90px;
+
+}
+
+header .container {
+  position: relative;
+}
+
+header #search-bg {
+  /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+
+  /* Pull the background 70px higher to the same place as #bg's */
+  background-position: center -70px;
+
+  -webkit-filter: blur(10px);
+  filter: url('/img/blur.svg#blur');
+  filter: blur(10px);
+}
+
+header .intro-text {
+  /* Put this on top of the blurred layer */
+  position: relative;
+  z-index: 100;
+  padding: 20px;
+  margin-top:20%; 
+  background: rgb(34,34,34); /* for IE */
+  background: rgba(34,34,34,0.75);
+}
+
+.filter-results{
+    background-color: #F5F5F5;
+    border-bottom: 1px solid #000;
+    border-top: 1px solid #000;
+}
+
+footer .fa{
+    padding: 12px;
+}
+
+@media (max-width: 600px ) {
+ header { padding: 10px; }
+  header #search-bg { background-position: center -10px; }
+}
+
   
