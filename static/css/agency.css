@@ -1035,7 +1035,7 @@ header {
     color: #fff;
     background-attachment: scroll;
     background-image: url(../img/think-coffee-header.jpg);
-    background-position: center center;
+    background-position: center bottom;
     background-repeat: none;
     -webkit-background-size: cover;
     -moz-background-size: cover;

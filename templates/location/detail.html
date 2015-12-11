@@ -22,7 +22,7 @@
                         <div class="row">
                             <div class="col-md-8">
                                 <h2>{{ location.title }}</h2>
-                                {% if location.address %}<p><b>Location: </b>{{ location.address }}</b></p>{% endif %}
+                                {% if location.address %}<p><b>Address: </b>{{ location.address }}</b></p>{% endif %}
                                 <p><b>{{ location.description }}</b></p>
                             </div>
             <div class="row">
@@ -81,15 +81,6 @@
                                 {% endcomment %}
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12 edit-update-create">                              
-                                {% if user_review %}
-                                    <a type="button" href="{% url 'review_update' pk=location.id %}" class="btn btn-default pull-right">Edit Review</a>
-                                {% else %}
-                                    <a type="button" href="{% url 'review_create' pk=location.id %}" class="btn btn-default pull-right">Create Review</a>
-                                {% endif %}
-                            </div>
-                        </div>
                         <div class ="clearfix"></div>
                         <div class = "row reviews">
                             <div class="col-md-12">
@@ -100,6 +91,11 @@
                             </div>
                         </div>
                         <a type="button" href="/location" class="btn btn-default pull-right">Go back to results page</a>
+                        {% if user_review %}
+                                    <a type="button" href="{% url 'review_update' pk=location.id %}" class="btn btn-default pull-right">Edit Review</a>
+                                {% else %}
+                                    <a type="button" href="{% url 'review_create' pk=location.id %}" class="btn btn-default pull-right">Create Review</a>
+                                {% endif %}
                         </div>
                     </div>
                 </div>

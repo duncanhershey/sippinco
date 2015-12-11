@@ -31,7 +31,7 @@ YESNO_CHOICES = (
 
 SUBURB_CHOICES = (
     (0, 'Botley'),
-    (1, 'Central'),
+    (1, 'City Centre'),
     (2, 'Cowley'),
     (3, 'Headington'),
     (4, 'Jericho'),
