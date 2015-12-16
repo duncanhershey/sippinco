@@ -245,6 +245,14 @@ fieldset[disabled] .btn-xl.active {
 
 }
 
+.navbar-default .begin  {
+
+    border:2px solid #f1c40f;
+
+
+}
+
+
 .navbar-default .nav li a:hover,
 .navbar-default .nav li a:focus {
     outline: 0;
